@@ -39,7 +39,7 @@ spec:
   continueUpgradeAfterChecksEvenIfNotHealthy: false
   mon:
     # Set the number of mons to be started. Must be an odd number, and is generally recommended to be 3.
-    count: 3
+    count: 1
     # The mons should be on unique nodes. For production, at least 3 nodes are recommended for this reason.
     # Mons should only be allowed on the same node for test environments where data loss is acceptable.
     allowMultiplePerNode: false
@@ -61,7 +61,7 @@ spec:
   # enable prometheus alerting for cluster
   monitoring:
     # requires Prometheus to be pre-installed
-    enabled: false
+    enabled: true
     # namespace to deploy prometheusRule in. If empty, namespace of the cluster will be used.
     # Recommended:
     # If you have a single rook-ceph cluster, set the rulesNamespace to the same namespace as the cluster or keep it empty.
@@ -87,7 +87,7 @@ spec:
     #ipFamily: "IPv6"
   # enable the crash collector for ceph daemon crash collection
   crashCollector:
-    disable: false
+    disable: true
     # Uncomment daysToRetain to prune ceph crash entries older than the
     # specified number of days.
     #daysToRetain: 30

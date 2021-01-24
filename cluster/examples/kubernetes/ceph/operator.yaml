@@ -305,7 +305,7 @@ spec:
         # If the operator should only watch for cluster CRDs in the same namespace, set this to "true".
         # If this is not set to true, the operator will watch for cluster CRDs in all namespaces.
         - name: ROOK_CURRENT_NAMESPACE_ONLY
-          value: "false"
+          value: "true"
         # To disable RBAC, uncomment the following:
         # - name: RBAC_ENABLED
         #   value: "false"
@@ -424,7 +424,7 @@ spec:
         # Whether to start the discovery daemon to watch for raw storage devices on nodes in the cluster.
         # This daemon does not need to run if you are only going to create your OSDs based on StorageClassDeviceSets with PVCs.
         - name: ROOK_ENABLE_DISCOVERY_DAEMON
-          value: "false"
+          value: "true"
 
         # Time to wait until the node controller will move Rook pods to other
         # nodes after detecting an unreachable node.
